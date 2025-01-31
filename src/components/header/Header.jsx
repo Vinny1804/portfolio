@@ -7,34 +7,24 @@ import { useState } from 'react'
 import s from './header.module.scss'
 
 export default function Header() {
-    const [visivel, setVisivel] = useState(false)
-    const [nomeHeader, setNomeHeader] = useState('Portfólio')
-    
-    const mudarNomeHeader = () => {
-        if (visivel) {
-            setNomeHeader("Portfólio")
-        } else {
-            setNomeHeader(
+    const [mostrarMenu, setMostrarMenu] = useState('Portfólio')
+
+    return (
+    <BrowserRouter>
+        <header className={s.header}>
+            <h1>&lt;Vinicius&gt;</h1>
+            <h3 className={s.nomePortfolio} onClick={() => {setMostrarMenu(
                 <section className={s.sectionHeader}>
                 <nav>
                     <ul>
-                        <li><Link className={s.link} to='/'>Inicio</Link></li>
+                        <li><Link className={s.link} to='/'>Início</Link></li>
                         <li><Link className={s.link} to='/sobre'>Sobre</Link></li>
                         <li><Link className={s.link} to='/projetos'>Projetos</Link></li>
                         <li><Link className={s.link} to='/contato'>Contato</Link></li>
                     </ul>
                 </nav>
                 </section>
-            )
-        }
-        setVisivel(!visivel)
-    }
-
-    return (
-    <BrowserRouter>
-        <header className={s.header}>
-            <h1>&lt;Vinicius&gt;</h1>
-            <h3 className={s.nomePortfolio} onClick={mudarNomeHeader}>{nomeHeader}</h3>
+            )}}>{mostrarMenu}</h3>
 
             <h1>&lt;Aguiar/&gt;</h1>     
         </header>
@@ -48,3 +38,4 @@ export default function Header() {
 
     )
 }
+
