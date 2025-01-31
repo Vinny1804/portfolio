@@ -1,0 +1,45 @@
+.header {
+    background: linear-gradient(to right, #018df8, #021d2f);
+    height: 12vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    a {
+        color: white;
+        text-decoration: none;
+    }
+}
+
+h1 {
+    color: rgb(0, 0, 0);
+    //border: solid;
+    //width: 30%;
+    // display: flex;
+    // justify-content: space-evenly;
+}
+
+.sectionHeader {
+    //background-color: green;
+    width: 16vw;
+}
+
+.nomePortfolio {
+    cursor: pointer;
+}
+
+nav {
+    //border: solid red;
+    width: 100%;
+    font-size: 20px;        
+    ul {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;             
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+}
+
