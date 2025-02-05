@@ -1,0 +1,69 @@
+.main {
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+}
+.cmd {
+    width: 700px; /// arrumar tamanho
+    height: 70%; /// arrumar tamanho
+    background: #222;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    font-family: "Courier New", monospace;
+}
+.cmdHeader {
+    background: #333;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+.cmdBody {
+    padding: 2%;
+    font-size: 18px;
+    // display: flex;
+    // flex-direction: column;
+
+    .verde {
+        color: #00ff00;
+    }
+    .amarelo {
+        color: yellow;
+    }
+    .digitar {
+        color: white;
+        padding-bottom: 3%;
+        
+    }
+    .saidaPastas {
+        color: rgb(77, 132, 255);
+        font-weight: 800;
+        padding-bottom: 5%;
+    }
+
+    // @keyframes blink {
+    //     0% { border-left: 2px solid transparent; }
+    //     50% { border-left: 2px solid white; }
+    //     100% { border-left: 2px solid transparent; }
+    // }
+    input {
+        background-color: #333;
+        margin-left: 1%;
+        font-family: "Courier New", monospace;
+        font-size: 17px;
+        border: none;
+        //background-color: transparent;
+        outline: none;
+        //animation: blink 1s step-end infinite;
+    }
+
+    // input::placeholder {
+    //     font-size: 17px;
+    //     color: white;
+    // }
+}

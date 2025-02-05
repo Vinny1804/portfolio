@@ -11,7 +11,7 @@ export default function Header() {
 
     const trocarMenu = () => {
         if (menu === 'Portfólio') {
-         setMenu(
+            setMenu(
             <section className={s.sectionHeader}>
             <nav>
                 <ul>
@@ -22,16 +22,13 @@ export default function Header() {
                 </ul>
             </nav>
             </section>
-        )
-        }
-      };
+        )}};
 
     return (
     <BrowserRouter>
         <header className={s.header}>
             <h1>&lt;Vinicius&gt;</h1>
             <h3 className={s.nomePortfolio} onClick={trocarMenu}>{menu}</h3>
-
             <h1>&lt;Aguiar/&gt;</h1>     
         </header>
     <Routes>
@@ -41,7 +38,6 @@ export default function Header() {
         <Route path='/contato' element={<Contato/>}/>
     </Routes>
     </BrowserRouter>
-
     )
 }
 
