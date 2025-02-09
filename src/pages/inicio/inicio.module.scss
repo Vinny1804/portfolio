@@ -5,13 +5,14 @@
     justify-content: center;
     align-items: center;
 
-    img {
+    .imagemCMDIcon {
         cursor: pointer;
     }
+
 }
 .cmd {
-    width: 700px; /// arrumar tamanho
-    height: 70%; /// arrumar tamanho
+    width: 45vw; 
+    height: 50%; 
     background: #222;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -19,11 +20,27 @@
 }
 .cmdHeader {
     background: #333;
-    padding: 10px;
+    padding: 8px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    .janelaIcones {
+        width: 20%;
+        //border: solid blue;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .iconeJanela, .iconeJanelaMin {
+        cursor: pointer;
+        width: 25px;
+        height: 25px;
+        //border: solid red;
+    }
 }
 .cmdBody {
     padding: 2%;

@@ -1,5 +1,9 @@
 import { useState } from 'react'
 import icon from '../../assets/cmdIcon.png'
+import minimizarIcon from '../../assets/minimizarIcon.png'
+import maximizarIcon from '../../assets/maximizarIcon.png'
+import fecharIcon from '../../assets/fecharIcon.png'
+import interrogacaoIcon from '../../assets/interrogacaoIcon.png'
 import s from './inicio.module.scss'
 import { useNavigate } from 'react-router-dom';
 
@@ -45,16 +49,18 @@ export default function Inicio() {
             <main className={s.main}>
             {trocarInicio ? (
             <section className={s.cmd}>
+
                 <div className={s.cmdHeader}>
                 <p>C:/Users/vinny/Desktop/Portfolio/Projetos</p>
-                <p>_</p> {/* Provisório */}
-                <p>[]</p> {/* Provisório */}
-                <p>X</p> {/* Provisório */}
-                <p>?</p> {/* Provisório */}
+                <section className={s.janelaIcones}>
+                    <img className={s.iconeJanelaMin} src={minimizarIcon} alt="Icone de minimizar janela" /> 
+                    <img className={s.iconeJanela} src={maximizarIcon} alt="Icone de maximizar janela" /> 
+                    <img className={s.iconeJanela} src={fecharIcon} onClick={() => setTrocarInicio()} alt="Icone de fechar janela" /> 
+                    <img className={s.iconeJanela} src={interrogacaoIcon} alt="Icone de um ponto de interrogação" />
+                </section>
                 </div>
                 <div className={s.cmdBody}>
                 <p className={s.verde}>vinny@Vinny-Desktop <span className={s.amarelo}>~/Desktop/Portfolio</span></p>
-                
                 <form onSubmit={cmdDigitado}>
                     <>$</>
                     <input
@@ -80,7 +86,8 @@ export default function Inicio() {
                 </div>
             </section>
             ) : (
-            <img 
+            <img
+                className={s.imagemCMDIcon}
                 src={icon} 
                 alt="Ícone do prompt de comando (cmd)" 
                 onClick={() => setTrocarInicio(true)} 
