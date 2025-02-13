@@ -1,9 +1,11 @@
 import s from './projetos.module.scss'
-import projetoLivrosVNW from '../../assets/projeto1.png'
-import projetoLojaVNW from '../../assets/projeto2.png'
 import githubIcon from '../../assets/githubIcon.png'
 import deployIcon from '../../assets/deployIcon.png'
-import { useState } from 'react'
+import projetoLivrosVNW from '../../assets/projetoLivrosVNW.png'
+import projetoLojaVNW from '../../assets/projetoLojaVNW.png'
+import projetoOutubroRosa from '../../assets/projetoOutubroRosa.png'
+import projetoSemaforo from '../../assets/projetoSemaforo.png'
+import projetoPadrinhosMagicos from '../../assets/projetoPadrinhosMagicos.png'
 
 export default function Projetos() {
 
@@ -11,26 +13,51 @@ export default function Projetos() {
         {
             id: 1,
             imagemSRC: projetoLivrosVNW,
-            imagemALT: "Imagem do Projeto 1",
-            nomeProjeto: "Projeto 1",
-            linkCodigo: "https://github.com/seu-repositorio/projeto1",
-            linkDeploy: "https://seu-deploy.com/projeto1"
+            imagemALT: "Imagem da página: Livros Vai na Web",
+            nomeProjeto: "Livros Vai na Web",
+            linkCodigo: "https://github.com/Vinny1804/DesafioLivrosVNW",
+            linkDeploy: "https://desafio-livros-vnw.vercel.app/"
         },
         {
             id: 2,
             imagemSRC: projetoLojaVNW,
-            imagemALT: "Imagem do Projeto 2",
-            nomeProjeto: "Projeto 2",
-            linkCodigo: "https://github.com/seu-repositorio/projeto2",
-            linkDeploy: "https://seu-deploy.com/projeto2"
+            imagemALT: "Imagem da página: Vai na Loja",
+            nomeProjeto: "Vai na Loja",
+            linkCodigo: "https://github.com/Vinny1804/VainaLoja",
+            linkDeploy: "https://vaina-loja.vercel.app/"
+        },
+        {
+            id: 3,
+            imagemSRC: projetoOutubroRosa,
+            imagemALT: "Imagem da página: Outubro Rosa",
+            nomeProjeto: "Outubro Rosa",
+            linkCodigo: "https://github.com/Vinny1804/OutubroRosaVNW",
+            linkDeploy: "https://outubro-rosa-vnw-seven.vercel.app/"
+        },
+        {
+            id: 4,
+            imagemSRC: projetoSemaforo,
+            imagemALT: "Imagem da página: Semáforo",
+            nomeProjeto: "Semáforo",
+            linkCodigo: "https://github.com/Vinny1804/projeto-semaforo-VNW",
+            linkDeploy: "https://projeto-semaforo-vnw.vercel.app/"
+        },
+        {
+            id: 5,
+            imagemSRC: projetoPadrinhosMagicos,
+            imagemALT: "Imagem da página: Padrinhos Mágicos",
+            nomeProjeto: "Padrinhos Mágicos",
+            linkCodigo: "https://github.com/Vinny1804/PadrinhosMagicosVNW",
+            linkDeploy: "https://padrinhos-magicos-vnw.vercel.app/"
         },
     ]
 
     const projetosBoard = (
-        <section className={s.cardDoProjeto}>
+        <section  className={s.projetosSection}> 
 
             {listaProjetos.map(item => (
-                <section>
+                <section className={s.cardDoProjeto}>
+
                     <img className={s.imgProjeto} src={item.imagemSRC} alt={item.imagemALT} />
                     
                     <div className={s.infoProjeto}>
@@ -45,9 +72,15 @@ export default function Projetos() {
     </section>
     )
 
+    
+
+
     return (
-        <section className={s.projetosSection}>
-            <section>{projetosBoard}</section>
-        </section>
+        <section>{projetosBoard}</section>
+
+
+
+
+            
     )
 }
