@@ -28,7 +28,7 @@ export default function Inicio() {
 
     const cmdListar = () => {
         if (texto === 'ls') {
-            setSaidaPastas('Contato/   Inicio/   Projetos/');
+            setSaidaPastas('Contatos/   Inicio/   Projetos/');
             setPrompt(<p className={s.verde}>vinny@Vinny-Desktop <span className={s.amarelo}>~/Desktop/Portfolio</span></p>)
             setNovoInput(true)
             setDesativar(true)
@@ -40,8 +40,8 @@ export default function Inicio() {
             navigate('/Sobre')
         } else if (texto === 'cd Projetos' || novoTexto === 'cd Projetos') {
             navigate('/Projetos')
-        } else if (texto === 'cd Contato' || novoTexto === 'cd Contato') {
-            navigate('/Contato')
+        } else if (texto === 'cd Contatos' || novoTexto === 'cd Contatos') {
+            navigate('/Contatos')
         }
     }
 
