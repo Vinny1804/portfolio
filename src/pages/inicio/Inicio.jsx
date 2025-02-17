@@ -19,6 +19,19 @@ export default function Inicio() {
     const [novoInput, setNovoInput] = useState(false)
     const [desativar, setDesativar] = useState(false)
     const [trocarInicio, setTrocarInicio] = useState(false)
+    
+    const [estilo, setEstilo] = useState(s.cmd)
+    const [ativo, setAtivo] = useState(false); 
+
+    const minimizarCMD = () => {
+        setEstilo(s.cmdMin);
+        setAtivo(true);
+    };
+    
+    const maximizarCMD = () => {
+        setEstilo(s.cmdMax);
+        setAtivo(false); 
+        };
 
     const cmdDigitado = (e) => {
         e.preventDefault()
@@ -29,7 +42,7 @@ export default function Inicio() {
     const cmdListar = () => {
         if (texto === 'ls') {
             setSaidaPastas('Contatos/   Inicio/   Projetos/');
-            setPrompt(<p className={s.verde}>vinny@Vinny-Desktop <span className={s.amarelo}>~/Desktop/Portfolio</span></p>)
+            setPrompt(<p className={s.verde}>guest@Vinny-Dev <span className={s.amarelo}>~/awesome-portfolio</span></p>)
             setNovoInput(true)
             setDesativar(true)
         }
@@ -48,41 +61,43 @@ export default function Inicio() {
     return (
             <main className={s.main}>
             {trocarInicio ? (
-            <section className={s.cmd}>
+            <section className={estilo}>
 
                 <div className={s.cmdHeader}>
-                <p>C:/Users/vinny/Desktop/Portfolio/Projetos</p>
+                <p>guest@Vinny-Dev C:/Users/vinny/Desktop/Portfolio</p>
+
                 <section className={s.janelaIcones}>
-                    <img className={s.iconeJanelaMin} src={minimizarIcon} alt="Icone de minimizar janela" /> 
-                    <img className={s.iconeJanela} src={maximizarIcon} alt="Icone de maximizar janela" /> 
-                    <img className={s.iconeJanela} src={fecharIcon} onClick={() => setTrocarInicio()} alt="Icone de fechar janela" /> 
-                    <img className={s.iconeJanela} src={interrogacaoIcon} alt="Icone de um ponto de interrogação" />
+                    <img className={s.iconeJanelaMin} src={minimizarIcon} onClick={minimizarCMD} alt="Icone de minimizar janela" />    
+                    <img className={s.iconeJanela} src={maximizarIcon} onClick={maximizarCMD} alt="Icone de maximizar janela" /> 
+                    <img className={s.iconeJanela} src={fecharIcon} onClick={() => {setTrocarInicio(); setEstilo(s.cmd)}} alt="Icone de fechar janela" /> 
+                    <img className={s.iconeJanela} src={interrogacaoIcon} alt="Icone de um ponto de interrogação"/>
                 </section>
                 </div>
+
                 <div className={s.cmdBody}>
-                <p className={s.verde}>vinny@Vinny-Desktop <span className={s.amarelo}>~/Desktop/Portfolio</span></p>
-                <form onSubmit={cmdDigitado}>
-                    <>$</>
-                    <input
-                    type="text"
-                    value={texto}
-                    onChange={(e) => setTexto(e.target.value)}
-                    disabled={desativar}
-                    />
-                    <p className={s.saidaPastas}>{saidaPastas}</p>
-                    <p>{prompt}</p>
-                    {novoInput && (
-                    <>
-                        $ 
-                        <input 
+                    <p className={s.verde}>guest@Vinny-Dev <span className={s.amarelo}>~/awesome-portfolio</span></p>
+                    <form onSubmit={cmdDigitado}>
+                        <>$</>
+                        <input
                         type="text"
-                        value={novoTexto}
-                        onChange={(e) => setNovoTexto(e.target.value)}
-                        onKeyDown={(e) => e.key === "Enter" && cmdDigitado(e)}
+                        value={texto}
+                        onChange={(e) => setTexto(e.target.value)}
+                        disabled={desativar}
                         />
-                    </>
-                    )}
-                </form>
+                        <p className={s.saidaPastas}>{saidaPastas}</p>
+                        <p>{prompt}</p>
+                        {novoInput && (
+                        <>
+                            $ 
+                            <input 
+                            type="text"
+                            value={novoTexto}
+                            onChange={(e) => setNovoTexto(e.target.value)}
+                            onKeyDown={(e) => e.key === "Enter" && cmdDigitado(e)}
+                            />
+                        </>
+                        )}
+                    </form>
                 </div>
             </section>
             ) : (

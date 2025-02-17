@@ -14,9 +14,9 @@ export default function Sobre() {
 
     const minhasRedes = (
         <section className={s.minhasRedesLogos}>
-            <a target='blank' href="https://www.linkedin.com/in/vinicius-bernardino/"><img src={linkedinLogo} alt="Logo azul do LinkedIn" /></a>
-            <a target='blank' href="https://github.com/Vinny1804"><img src={githubLogo} alt="Logo do GitHub" /></a>
-            <a target='blank' href="https://www.instagram.com/vinnyaguiarr/"><img src={instagramLogo} alt="Logo do Instagram" /></a>
+            <a target='_blank' href="https://www.linkedin.com/in/vinicius-bernardino/"><img src={linkedinLogo} alt="Logo azul do LinkedIn" /></a>
+            <a target='_blank' href="https://github.com/Vinny1804"><img src={githubLogo} alt="Logo do GitHub" /></a>
+            <a target='_blank' href="https://www.instagram.com/vinnyaguiarr/"><img src={instagramLogo} alt="Logo do Instagram" /></a>
         </section>
     )
 
@@ -30,6 +30,12 @@ export default function Sobre() {
 
             <div className={s.menuMinhasRedes}>
 
+            <a href='/curriculo.pdf' download='Curriculo Vinicius Aguiar.pdf'>
+                <button class={s.button} type="button">
+                    <span class={s.buttonText}>Currículo</span>
+                    <span class={s.buttonIcon}>{download}</span>
+                </button>
+            </a>
                 <label className={s.checkboxContainer}>
                     <input
                     type="checkbox"
@@ -37,10 +43,8 @@ export default function Sobre() {
                     onChange={mudar}/>
                     <span className="checkmark">Minhas Redes</span>
                 </label>
-                <button class={s.button} type="button">
-                    <span class={s.buttonText}>Currículo</span>
-                    <span class={s.buttonIcon}>{download}</span>
-                    </button>
+
+                    
                 <>{marcado ? minhasRedes : ""}</>
 
             </div>

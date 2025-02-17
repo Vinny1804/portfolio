@@ -18,7 +18,24 @@
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     font-family: "Courier New", monospace;
+    // overflow: auto;
+    // resize: both;
 }
+
+.cmdMin {
+    @extend .cmd;
+    height: auto;
+}
+.cmdMax {
+    @extend .cmd;
+    height: 100%;
+    width: 65vw;
+}
+
+
+
+
+
 .cmdHeader {
     background: #333;
     padding: 8px;
@@ -29,6 +46,7 @@
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    
     .janelaIcones {
         width: 20%;
         //border: solid blue;
@@ -41,6 +59,7 @@
         width: 25px;
         height: 25px;
         //border: solid red;
+        
     }
 }
 .cmdBody {
@@ -48,6 +67,7 @@
     font-size: 18px;
     // display: flex;
     // flex-direction: column;
+    
 
     .verde {
         color: #00ff00;

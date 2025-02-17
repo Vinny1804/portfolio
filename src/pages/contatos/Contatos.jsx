@@ -2,7 +2,6 @@ import { useState } from 'react'
 import emailIcone from '../../assets/emailIcone.png'
 import whatsappIcone from '../../assets/whatsappIcone.png'
 import QRCodeWhatsapp from '../../assets/qrCodeWhatsapp.png'
-
 import s from './contatos.module.scss'
 import emailjs from '@emailjs/browser'
 

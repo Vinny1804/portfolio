@@ -63,8 +63,8 @@ export default function Projetos() {
                     <div className={s.infoProjeto}>
                         <p className={s.nomeDoProjeto}>{item.nomeProjeto}</p>
                     <div className={s.icones}>
-                        <a target='blank' href={item.linkCodigo}><img className={s.infoIcones} src={githubIcon} alt="Icone do Github" /></a>
-                        <a target='blank' href={item.linkDeploy}><img className={s.infoIcones} src={deployIcon} alt="Icone de uma seta (deploy)" /></a>
+                        <a target='_blank' href={item.linkCodigo}><img className={s.infoIcones} src={githubIcon} alt="Icone do Github" /></a>
+                        <a target='_blank' href={item.linkDeploy}><img className={s.infoIcones} src={deployIcon} alt="Icone de uma seta (deploy)" /></a>
                     </div>
                     </div>
                 </section>
@@ -79,8 +79,5 @@ export default function Projetos() {
         <section>{projetosBoard}</section>
 
 
-
-
-            
     )
 }
