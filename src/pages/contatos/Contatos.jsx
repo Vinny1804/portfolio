@@ -42,8 +42,8 @@ export default function Contato() {
     }
 
     const emailForm = (
-        <div className={s.container}>
-                <h2 className={s.title}>E-mail</h2>
+        <div className={s.emailSection}>
+                <h2 className={s.titulo}>E-mail</h2>
                 
                 <form className={s.form} onSubmit={sendEmail}>
                     <input
@@ -79,11 +79,11 @@ export default function Contato() {
         <section className={s.whatsappSection}>
             <h2>WhatsApp</h2>
             <img src={QRCodeWhatsapp} alt="QRCode para meu Whatsapp" />
-            <button><a target='blank' href="https://wa.me/5511970134342">Abrir WhatsApp Web</a></button>
+            <button>
+                <a target='blank' className={s.btn2} href="https://wa.me/5511970134342"><span className={s.spn2}>WhatsApp Web</span></a>
+            </button>
         </section>
     )
-
-    const whatsappQRCode = (<img src={QRCodeWhatsapp}/>)
 
     return (
         <section className={s.contatoSection}>
@@ -91,7 +91,7 @@ export default function Contato() {
             <section className={s.entreEmContato}>
                 <h1>Entre em Contato:</h1>
                 <div>
-                    <img src={emailIcone} alt="Icone de um envelope azul (E-mail)" onClick={() => setMudarContato(true)}/>
+                    <img src={emailIcone} className={s.email} alt="Icone de um envelope azul (E-mail)" onClick={() => setMudarContato(true)}/>
 
                     <img src={whatsappIcone} alt="Icone do Whatsapp" onClick={() => setMudarContato(false)}/>
                 </div>

@@ -62,7 +62,7 @@ export default function Inicio() {
                 <div className={s.modal} onClick={(e) => e.stopPropagation()}>
                     <h3>Comandos Disponíveis:</h3>
                     <p><b>ls</b> &#10142; Exibe as páginas disponíveis no portfólio.</p>
-                    <p><b>cd + NomeDaPágina</b> &#10142; Navega para a página especificada. Exemplo: <code>cd Projetos</code>.</p>
+                    <p><b>cd + 'NomeDaPágina'</b> &#10142; Navega para a página especificada. Exemplo: <code>cd Projetos</code>.</p>
                     <button onClick={() => setEstaAtivo(false)}>Fechar</button>
                 </div>
             </div>
