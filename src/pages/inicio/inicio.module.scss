@@ -4,11 +4,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
-
-    .imagemCMDIcon {
-        cursor: pointer;
-    }
+    //background-color: #021b33;
+    //background-color: #101720;
+    background-color: #101720;
 
 }
 .cmd {
@@ -18,8 +16,6 @@
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     font-family: "Courier New", monospace;
-    // overflow: auto;
-    // resize: both;
 }
 
 .cmdMin {
@@ -33,8 +29,63 @@
 }
 
 
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal {
+    background: rgb(65, 60, 72);
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.3s ease-in-out;
 
+    h3 {
+        padding-bottom: 5%;
+    }
 
+    p {
+        margin-bottom: 20px;
+    }
+
+    button {
+        padding: 5px 15px;
+        border: none;
+        background-color: #007bff;
+        color: white;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: 0.3s;
+    
+        &:hover {
+            background-color: #a2004f;
+        }
+    }
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.terminalPrompt {
+    //display: inline-block;
+    color: white;
+}
 
 .cmdHeader {
     background: #333;
@@ -85,25 +136,90 @@
         font-weight: 800;
         padding-bottom: 5%;
     }
-
-    // @keyframes blink {
-    //     0% { border-left: 2px solid transparent; }
-    //     50% { border-left: 2px solid white; }
-    //     100% { border-left: 2px solid transparent; }
-    // }
+    
     input {
         background-color: #333;
         margin-left: 1%;
         font-family: "Courier New", monospace;
         font-size: 17px;
         border: none;
-        //background-color: transparent;
         outline: none;
-        //animation: blink 1s step-end infinite;
+        color: white;
+
+    }
+    input:focus {
+        background-color: transparent;
     }
 
-    // input::placeholder {
-    //     font-size: 17px;
-    //     color: white;
-    // }
+}
+
+
+.botaoUi {
+    --mainColor: rgb(46, 213, 115);
+    --mainBgColor: rgba(46, 213, 116, 0.36);
+    --patternColor: rgba(0, 204, 85, 0.073);
+    filter: hue-rotate(0deg);
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    background: radial-gradient(
+        circle, var(--mainBgColor) 0%, rgba(0, 0, 0, 0) 95%),
+        linear-gradient(var(--patternColor) 1px, transparent 1px),
+        linear-gradient(to right, var(--patternColor) 1px, transparent 1px);
+    background-size: cover, 15px 15px, 15px 15px;
+    background-position: center center, center center, center center;
+    border-image: radial-gradient(circle, var(--mainColor) 0%, rgba(0, 0, 0, 0) 100%) 1;
+    border-width: 1px 0 1px 0;
+    color: var(--mainColor);
+    padding: 1.5rem 6rem;
+    font-weight: 700;
+    font-size: 1.5rem;
+    transition: background-size 0.2s ease-in-out;
+}
+.botaoUi:hover {
+    background-size:
+        cover,
+        10px 10px,
+        10px 10px;
+}
+.botaoUi:active {
+    filter: hue-rotate(30deg);
+}
+
+.botaoUi span {
+    transition: 1.2s;
+    position: relative;
+    background: inherit;
+}
+.botaoUi span::before {
+    position: absolute;
+    content: "";
+    background: inherit;
+}
+.botaoUi:hover span::before {
+    animation: chitchat linear both 1.2s;
+}
+
+@keyframes chitchat {
+    0% { content: "###"; }
+    5% { content: "."; }
+    10% { content: "^{"; }
+    15% { content: "-!"; }
+    20% { content: "#$_"; }
+    25% { content: "№:0"; }
+    30% { content: "#+."; }
+    35% { content: "@}-?"; }
+    40% { content: "?{4@%"; }
+    45% { content: "=.,^!"; }
+    50% { content: "?2@%"; }
+    55% { content: "\;1}]"; }
+    60% { content: "?{%:%"; right: 0; }
+    65% { content: "|{f[4"; right: 0; }
+    70% { content: "{4%0%"; right: 0; }
+    75% { content: "'1_0<"; right: 0; }
+    80% { content: "{0%"; right: 0; }
+    85% { content: "]>'"; right: 0; }
+    90% { content: "4"; right: 0; }
+    95% { content: "2"; right: 0; }
+    100% { content: ""; right: 0; }
 }

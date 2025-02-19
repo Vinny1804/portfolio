@@ -1,5 +1,10 @@
 .sobreSection {
-    background-color: #121212;
+    background-color: #101720;
+    //background-color: #011222; ////az esc
+    //background-color: #171717;
+    //background-color: #020d19; //
+    //background-color: #0b1215;
+    //background: linear-gradient(to bottom, #191bdf, #1a1a1a);
     height: 85vh;
     color: white;
     display: flex;
@@ -7,17 +12,21 @@
     justify-content: space-evenly;
     align-items: center;
     //border: solid green;
+    
 
     h1 {
         color: white;
-        font-size: 30px;
+        font-size: 40px;
         //border: solid red;
+        letter-spacing: 5px;
     }
 
     p {
         //border: solid;
         width: 40%;
         text-align: justify;
+        font-size: 25px;
+        letter-spacing: 2px;
     }
 }
 

@@ -53,7 +53,8 @@ export default function Projetos() {
     ]
 
     const projetosBoard = (
-        <section  className={s.projetosSection}> 
+        <section className={s.projetosSection}> 
+            
 
             {listaProjetos.map(item => (
                 <section className={s.cardDoProjeto}>
@@ -76,7 +77,11 @@ export default function Projetos() {
 
 
     return (
-        <section>{projetosBoard}</section>
+        <section>
+            <h1 className={s.titulo}>Projetos</h1>
+            {projetosBoard}
+
+        </section>
 
 
     )

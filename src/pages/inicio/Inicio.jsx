@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import icon from '../../assets/cmdIcon.png'
 import minimizarIcon from '../../assets/minimizarIcon.png'
 import maximizarIcon from '../../assets/maximizarIcon.png'
 import fecharIcon from '../../assets/fecharIcon.png'
@@ -19,19 +18,19 @@ export default function Inicio() {
     const [novoInput, setNovoInput] = useState(false)
     const [desativar, setDesativar] = useState(false)
     const [trocarInicio, setTrocarInicio] = useState(false)
-    
     const [estilo, setEstilo] = useState(s.cmd)
-    const [ativo, setAtivo] = useState(false); 
+    const [visivel, setVisivel] = useState(false); 
+    const [estaAtivo, setEstaAtivo] = useState(false); 
 
     const minimizarCMD = () => {
         setEstilo(s.cmdMin);
-        setAtivo(true);
+        setVisivel(true);
     };
     
     const maximizarCMD = () => {
         setEstilo(s.cmdMax);
-        setAtivo(false); 
-        };
+        setVisivel(false); 
+    };
 
     const cmdDigitado = (e) => {
         e.preventDefault()
@@ -58,6 +57,17 @@ export default function Inicio() {
         }
     }
 
+        const modal = (
+            <div className={s.overlay} onClick={() => setEstaAtivo(false)}>
+                <div className={s.modal} onClick={(e) => e.stopPropagation()}>
+                    <h3>Comandos Disponíveis:</h3>
+                    <p><b>ls</b> &#10142; Exibe as páginas disponíveis no portfólio.</p>
+                    <p><b>cd + NomeDaPágina</b> &#10142; Navega para a página especificada. Exemplo: <code>cd Projetos</code>.</p>
+                    <button onClick={() => setEstaAtivo(false)}>Fechar</button>
+                </div>
+            </div>
+        );
+
     return (
             <main className={s.main}>
             {trocarInicio ? (
@@ -70,14 +80,18 @@ export default function Inicio() {
                     <img className={s.iconeJanelaMin} src={minimizarIcon} onClick={minimizarCMD} alt="Icone de minimizar janela" />    
                     <img className={s.iconeJanela} src={maximizarIcon} onClick={maximizarCMD} alt="Icone de maximizar janela" /> 
                     <img className={s.iconeJanela} src={fecharIcon} onClick={() => {setTrocarInicio(); setEstilo(s.cmd)}} alt="Icone de fechar janela" /> 
-                    <img className={s.iconeJanela} src={interrogacaoIcon} alt="Icone de um ponto de interrogação"/>
+                    
+                    <img className={s.iconeJanela} src={interrogacaoIcon} onClick={() => setEstaAtivo(true)} alt="Icone de um ponto de interrogação"/>
+                    {estaAtivo && modal}  
+
+
                 </section>
                 </div>
 
                 <div className={s.cmdBody}>
                     <p className={s.verde}>guest@Vinny-Dev <span className={s.amarelo}>~/awesome-portfolio</span></p>
                     <form onSubmit={cmdDigitado}>
-                        <>$</>
+                        <span className={s.terminalPrompt}>$</span>
                         <input
                         type="text"
                         value={texto}
@@ -86,9 +100,8 @@ export default function Inicio() {
                         />
                         <p className={s.saidaPastas}>{saidaPastas}</p>
                         <p>{prompt}</p>
-                        {novoInput && (
-                        <>
-                            $ 
+                        {novoInput && ( <>
+                        <span className={s.terminalPrompt}>$</span>
                             <input 
                             type="text"
                             value={novoTexto}
@@ -101,13 +114,18 @@ export default function Inicio() {
                 </div>
             </section>
             ) : (
-            <img
-                className={s.imagemCMDIcon}
-                src={icon} 
-                alt="Ícone do prompt de comando (cmd)" 
-                onClick={() => setTrocarInicio(true)} 
-            />
+                <button className={s.botaoUi} onClick={() => setTrocarInicio(true)}>
+                    <span>Prompt</span>
+                </button>
             )}
         </main>
     )
 }
+
+
+{/* <img
+className={s.imagemCMDIcon}
+src={icon} 
+alt="Ícone do prompt de comando (cmd)" 
+onClick={() => setTrocarInicio(true)} 
+/> */}

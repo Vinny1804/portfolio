@@ -1,45 +1,55 @@
 .header {
-    background: linear-gradient(to right, #018df8, #021d2f);
-    height: 12vh;
+    background: linear-gradient(to right, #011222, #020d19);
+    border-bottom: solid #12577b;
+    height: 10vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: rgb(255, 255, 255);
     a {
-        color: white;
+        color: rgb(255, 255, 255);
         text-decoration: none;
+        letter-spacing: 2px;
     }
-}
-
-h1 {
-    color: rgb(0, 0, 0);
-    //border: solid;
-    //width: 30%;
-    // display: flex;
-    // justify-content: space-evenly;
-}
-
-.sectionHeader {
-    //background-color: green;
-    width: 16vw;
 }
 
 .nomePortfolio {
     cursor: pointer;
+    font-size: 40px;
+    
 }
 
-nav {
-    //border: solid red;
-    width: 100%;
-    font-size: 20px;        
-    ul {
-        list-style: none;
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;             
-    }
-    a:hover {
-        text-decoration: underline;
+
+
+.sectionHeader {
+    
+    nav {
+        //border: solid red;
+        width: 30vw;
+        font-size: 32px;
+        ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        a::before {
+            margin-left: auto;
+        }
+    
+        a::after, a::before {
+            content: '';
+            width: 0%;
+            height: 2px;
+            background: #f44336;
+            display: block;
+            transition: 0.5s;
+        }
+        a:hover::after, a:hover::before {
+            width: 100%;
+        }
     }
 }
+
+
 
