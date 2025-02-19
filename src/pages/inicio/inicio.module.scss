@@ -26,6 +26,15 @@
     @extend .cmd;
     height: 100%;
     width: 65vw;
+    .cmdHeader {
+        font-size: 35px;
+    }
+    .cmdBody {
+        font-size: 35px;
+    }
+    .input {
+        font-size: 35px;
+    }
 }
 
 
@@ -99,6 +108,7 @@
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    font-size: 25px;
     
     .janelaIcones {
         width: 20%;
@@ -117,7 +127,7 @@
 }
 .cmdBody {
     padding: 2%;
-    font-size: 18px;
+    font-size: 25px;
     // display: flex;
     // flex-direction: column;
     
@@ -143,7 +153,7 @@
         background-color: #333;
         margin-left: 1%;
         font-family: "Courier New", monospace;
-        font-size: 17px;
+        font-size: 25px;
         border: none;
         outline: none;
         color: white;
