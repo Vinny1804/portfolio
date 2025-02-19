@@ -16,15 +16,11 @@
 .nomePortfolio {
     cursor: pointer;
     font-size: 40px;
-    
 }
-
-
 
 .sectionHeader {
     
     nav {
-        //border: solid red;
         width: 30vw;
         font-size: 32px;
         ul {
@@ -36,7 +32,6 @@
         a::before {
             margin-left: auto;
         }
-    
         a::after, a::before {
             content: '';
             width: 0%;

@@ -10,7 +10,6 @@ import { useNavigate } from 'react-router-dom';
 export default function Inicio() {
     
     const navigate = useNavigate()
-
     const [texto, setTexto] = useState('')
     const [novoTexto, setNovoTexto] = useState('')
     const [saidaPastas, setSaidaPastas] = useState('') 
@@ -83,8 +82,6 @@ export default function Inicio() {
                     
                     <img className={s.iconeJanela} src={interrogacaoIcon} onClick={() => setEstaAtivo(true)} alt="Icone de um ponto de interrogação"/>
                     {estaAtivo && modal}  
-
-
                 </section>
                 </div>
 
@@ -121,11 +118,3 @@ export default function Inicio() {
         </main>
     )
 }
-
-
-{/* <img
-className={s.imagemCMDIcon}
-src={icon} 
-alt="Ícone do prompt de comando (cmd)" 
-onClick={() => setTrocarInicio(true)} 
-/> */}

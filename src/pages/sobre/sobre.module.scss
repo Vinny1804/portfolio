@@ -1,36 +1,25 @@
 .sobreSection {
     background-color: #101720;
-    //background-color: #011222; ////az esc
-    //background-color: #171717;
-    //background-color: #020d19; //
-    //background-color: #0b1215;
-    //background: linear-gradient(to bottom, #191bdf, #1a1a1a);
     height: 85vh;
     color: white;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    //border: solid green;
-    
-
     h1 {
         color: white;
         font-size: 16px;
-        //border: solid red;
         letter-spacing: 5px;
         width: 80%;
         height: 20%;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
-
         .nome {
             font-size: 40px;
             color: #f44336;
         }
     }
-
     p {
         //border: solid;
         width: 60%;
@@ -58,9 +47,6 @@
     justify-content: space-between;
     margin-bottom: 15%;
     letter-spacing: 2px;
-    // .menu > .toggleChecker {
-    //     display: none;
-    // }
 
     .toggleChecker {
         height: 3em;
@@ -69,19 +55,12 @@
     }
     
     .switch {
-        // display: flex;
-        // height: 50%;
-        // width: 20px;
-        // flex-direction: column;
-        // gap: 3px;
-    
         width: 2em;
         display: flex;
         flex-direction: column;
         gap: 0.3em;
         cursor: pointer;
     }
-    
     .line1 {
         background: white;
         height: 0.3em;
@@ -100,7 +79,6 @@
         border-radius: 10em;
         transition-duration: 500ms;
     }
-    
     .menuContainer {
         background-color: white;
         color: darkviolet;
@@ -113,7 +91,6 @@
         clip-path: inset(0% 0% 0% 0% round 10px);
         transition: all 0.4s;
     }
-    
     .menuList {
         --delay: 0.4s;
         --trdelay: 0.15s;
@@ -126,7 +103,6 @@
         height: 50px;
         
     }
-    
     .toggleChecker:checked ~ .menuContainer {
         clip-path: inset(10% 50% 90% 50% round 10px);
     }
@@ -171,13 +147,7 @@
 
 }    
 
-
 .button {
-    // --main-focus: #2d8cf0;
-    // --font-color: #323232;
-    // --bg-color-sub: #dedede;
-    // --bg-color: #eee;
-    // --main-color: #323232;
     position: relative;
     width: 100%;
     height: 100%;
@@ -185,13 +155,9 @@
     display: flex;
     align-items: center;
     border: none;
-    //border: 2px solid var(--main-color);
-    //box-shadow: 4px 4px var(--main-color);
     background-color: transparent;
-    //border-radius: 10px;
     overflow: hidden;
     font-size: 15px;
-
 }
 a {
     text-decoration: none;
@@ -209,17 +175,13 @@ a {
     transform: translateX(109px);
     height: 100%;
     width: 39px;
-    //border: solid red;
     background-color: var(--bg-color);
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
-
 .button .downloadIcon {
     width: 25px;
-    fill: blue;
 }
 .button:hover {
     background: var(--bg-color);
@@ -233,9 +195,7 @@ a {
 }
 .button:active {
     transform: translate(3px, 3px);
-    //box-shadow: 0px 0px var(--main-color);
 }
-
 .buttonText {
     letter-spacing: 1.5px;
 }

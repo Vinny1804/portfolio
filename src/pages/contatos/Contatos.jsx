@@ -10,9 +10,7 @@ export default function Contato() {
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [message, setMessage] = useState('')
-
     const [mudarContato, setMudarContato] = useState(true)
-
 
     const sendEmail = (e) => {
         e.preventDefault()
@@ -96,12 +94,9 @@ export default function Contato() {
                     <img src={whatsappIcone} alt="Icone do Whatsapp" onClick={() => setMudarContato(false)}/>
                 </div>
             </section>
-
-
-                <>{mudarContato ? emailForm : whatsappLinks}</>
+            
+            <>{mudarContato ? emailForm : whatsappLinks}</>
                 
-
-
         </section>
     )
 }

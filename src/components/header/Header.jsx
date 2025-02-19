@@ -28,7 +28,7 @@ export default function Header() {
     <BrowserRouter>
         <header className={s.header}>
             <span className={s.nomePortfolio}>&lt; </span>
-            <h1 className={s.nomePortfolio} onClick={trocarMenu} transition-style="in:diamond:center"> {menu} </h1>
+            <h1 className={s.nomePortfolio} onClick={trocarMenu}> {menu} </h1>
             <span className={s.nomePortfolio}> /&gt;</span>   
         </header>
     <Routes>

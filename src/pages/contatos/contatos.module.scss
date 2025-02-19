@@ -1,10 +1,8 @@
 .entreEmContato {
-    //background-color: #121212;
     background-color: #101720;
     display: flex;
     align-items: center;
     justify-content: center;
-    //border: solid red;
     padding-top: 2%;
     h1 {
         color: white;
@@ -31,17 +29,14 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    //background-color: #121212;
     background-color: #101720;
     color: #FFF;
     padding: 14px;
-
     h2 {
         margin-bottom: 2%;
         font-size: 32px;
         letter-spacing: 3px;
     }
-
     button {
         text-decoration: none;
         border: none;
@@ -102,34 +97,22 @@
         position: relative;
         z-index: 3;
     }
-
 }    
-
-
-
-
-
-
-
-
 .emailSection {
     min-height: 71vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    //background-color: #121212;
     background-color: #101720;
     color: #FFF;
     padding: 14px;
     font-size: 32px;
     letter-spacing: 3px;
 }
-
 .titulo {
     margin-bottom: 2%;
 }
-
 .form {
     max-width: 600px;
     width: 100%;
@@ -139,7 +122,6 @@
         font-size: 15px;
     }
 }
-
 .input {
     margin-bottom: 14px;
     height: 34px;
@@ -148,7 +130,6 @@
     padding: 0 8px;
     font-size: 16px;
 }
-
 .textarea {
     margin-bottom: 14px;
     border-radius: 4px;
@@ -158,7 +139,6 @@
     resize: none;
     font-size: 16px;
 }
-
 .button {
     height: 34px;
     border-radius: 4px;
@@ -168,7 +148,6 @@
     font-size: 18px;
     transition: background-color, transform 0.8s;
 }
-
 .button:hover {
     background-color: #0fe3ff;
     transform: scale(1.02);

@@ -59,7 +59,7 @@ export default function Projetos() {
                 <section className={s.cardDoProjeto}>
 
                     <img className={s.imgProjeto} src={item.imagemSRC} alt={item.imagemALT} />
-                    
+
                     <div className={s.infoProjeto}>
                         <p className={s.nomeDoProjeto}>{item.nomeProjeto}</p>
                     <div className={s.icones}>
@@ -72,16 +72,10 @@ export default function Projetos() {
     </section>
     )
 
-    
-
-
     return (
         <section>
             <h1 className={s.titulo}>Projetos</h1>
             {projetosBoard}
-
         </section>
-
-
     )
 }
