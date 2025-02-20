@@ -58,7 +58,7 @@ export default function Projetos() {
             {listaProjetos.map(item => (
                 <section className={s.cardDoProjeto}>
 
-                    <img className={s.imgProjeto} src={item.imagemSRC} alt={item.imagemALT} />
+                <a target='_blank' href={item.linkDeploy}><img className={s.imgProjeto} src={item.imagemSRC} alt={item.imagemALT} /></a>
 
                     <div className={s.infoProjeto}>
                         <p className={s.nomeDoProjeto}>{item.nomeProjeto}</p>
