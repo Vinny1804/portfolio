@@ -53,15 +53,12 @@
     }
 }
 .nomeDoProjeto {
-    //border: solid red;
     font-size: 25px;
 }
 .icones {
-    //border: solid green;
     width: 25%;
     display: flex;
-    justify-content: space-between;
-    //align-items: center;
+    justify-content: start;
 }
 .infoIcones {
     width: 35px;
