@@ -39,7 +39,7 @@ export default function Inicio() {
 
     const cmdListar = () => {
         if (texto === 'ls') {
-            setSaidaPastas('Contatos/   Inicio/   Projetos/');
+            setSaidaPastas('Contatos/   Sobre/   Projetos/');
             setPrompt(<p className={s.verde}>guest@Vinny-Dev <span className={s.amarelo}>~/awesome-portfolio</span></p>)
             setNovoInput(true)
             setDesativar(true)
