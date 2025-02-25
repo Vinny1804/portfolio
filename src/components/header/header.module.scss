@@ -21,7 +21,7 @@
 .sectionHeader {
     
     nav {
-        width: 30vw;
+        width: 50vw;
         font-size: 32px;
         ul {
             list-style: none;
@@ -46,5 +46,15 @@
     }
 }
 
-
+@media (max-width:768px) {
+    .nomePortfolio {
+        font-size: 25px;
+    }
+    .sectionHeader {
+        nav {
+            width: 90vw;
+            font-size: 20px;
+        }
+    }
+}
 

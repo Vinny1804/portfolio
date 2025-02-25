@@ -199,3 +199,23 @@ a {
 .buttonText {
     letter-spacing: 1.5px;
 }
+
+@media (max-width:768px) {
+    .sobreSection {
+        height: 100vh;
+        h1 {
+            font-size: 14px;
+            .nome {
+                font-size: 32px;
+            }
+        }
+        p {
+            width: 90%;
+            font-size: 18px;
+        }
+    }
+    .menu {
+        width: 60%;
+        justify-content: space-between;
+    }
+}

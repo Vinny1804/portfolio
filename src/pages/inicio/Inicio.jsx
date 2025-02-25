@@ -77,10 +77,10 @@ export default function Inicio() {
 
                 <section className={s.janelaIcones}>
                     <img className={s.iconeJanelaMin} src={minimizarIcon} onClick={minimizarCMD} alt="Icone de minimizar janela" />    
-                    <img className={s.iconeJanela} src={maximizarIcon} onClick={maximizarCMD} alt="Icone de maximizar janela" /> 
-                    <img className={s.iconeJanela} src={fecharIcon} onClick={() => {setTrocarInicio(); setEstilo(s.cmd)}} alt="Icone de fechar janela" /> 
+                    <img className={s.iconeJanelaMax} src={maximizarIcon} onClick={maximizarCMD} alt="Icone de maximizar janela" /> 
+                    <img className={s.iconeJanelaFechar} src={fecharIcon} onClick={() => {setTrocarInicio(); setEstilo(s.cmd)}} alt="Icone de fechar janela" /> 
                     
-                    <img className={s.iconeJanela} src={interrogacaoIcon} onClick={() => setEstaAtivo(true)} alt="Icone de um ponto de interrogação"/>
+                    <img className={s.iconeJanelaInterrogacao} src={interrogacaoIcon} onClick={() => setEstaAtivo(true)} alt="Icone de um ponto de interrogação"/>
                     {estaAtivo && modal}  
                 </section>
                 </div>

@@ -108,7 +108,7 @@
         justify-content: space-evenly;
         align-items: center;
     }
-    .iconeJanela, .iconeJanelaMin {
+    .iconeJanela, .iconeJanelaMin, .iconeJanelaMax, .iconeJanelaFechar, .iconeJanelaInterrogacao {
         cursor: pointer;
         width: 25px;
         height: 25px;
@@ -220,4 +220,31 @@
     90% { content: "4"; right: 0; }
     95% { content: "2"; right: 0; }
     100% { content: ""; right: 0; }
+}
+
+@media (max-width:768px) {
+    .main {
+        height: 82vh;
+    }
+    .cmd {
+        width: 95%; 
+    }
+    .cmdHeader {
+        font-size: 18px;
+
+        .janelaIcones {
+            width: 50%;
+        }
+        .iconeJanela, .iconeJanelaMin {
+            width: 15px;
+            height: 15px;
+        }
+    }
+    .iconeJanelaMin, .iconeJanelaMax {
+        display: none;
+    }
+    .cmdBody {
+        padding: 2%;
+        font-size: 20px;
+    }
 }

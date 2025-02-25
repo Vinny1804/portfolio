@@ -22,7 +22,6 @@
     }
 }
 
-
 .whatsappSection {
     min-height: 71vh;
     display: flex;
@@ -153,3 +152,29 @@
     transform: scale(1.02);
 }
 
+@media (max-width:768px) {
+    .entreEmContato {
+        padding-top: 5%;
+        height: 15vh;
+        flex-direction: column;
+        h1 {
+            font-size: 25px;
+        }
+        div {
+            width: 60%;
+            padding-top: 5%;
+        }
+        img {
+            width: 55px;
+        }
+    }
+    .titulo {
+        font-size: 40px;
+    }
+    .whatsappSection {
+        button {
+            padding-top: 5%;
+        }
+    }
+
+}

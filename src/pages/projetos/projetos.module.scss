@@ -1,6 +1,6 @@
 .projetosSection {
-    flex-wrap: wrap;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
     height: 120vh;
@@ -66,4 +66,38 @@
 }
 .infoIcones:hover {
     scale: (1.2);
+}
+
+@media (max-width:768px) {
+    .projetosSection {
+        flex-wrap: nowrap;
+        flex-direction: column;
+        height: 250vh;
+    }
+    .titulo {
+        padding-top: 5%;
+        font-size: 32px;
+    }
+    .cardDoProjeto{
+        width: 70vw;
+    }
+    .infoProjeto {
+        width: 100%;
+        justify-content: space-between;
+        opacity: 1;
+        clip-path: none;
+        transition: none;
+    }
+    .cardDoProjeto:hover .infoProjeto {
+        animation: none;
+    }
+    .nomeDoProjeto {
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+    }
+    .infoIcones {
+        width: 30px;
+        height: 30px;
+    }
 }
