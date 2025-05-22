@@ -1,8 +1,21 @@
-# React + Vite
+# 🌐 Meu Portfólio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Olá! Eu sou **Vinicius Aguiar** e este é meu primeiro portfólio. Aqui compartilho meus projetos e minha evolução na área de tecnologia. Este repositório contém o código-fonte do meu portfólio.
 
-Currently, two official plugins are available:
+## 📋 Sobre o Portfólio  
+Este site foi desenvolvido para apresentar um pouco sobre mim, minhas habilidades e os projetos que venho criando. Busco sempre melhorar minhas competências tanto no **front-end** quanto no **back-end**, e este portfólio reflete essa jornada.  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🔧 Tecnologias Utilizadas  
+- 🎨 **Front-end:** HTML, CSS, JavaScript, React.js  
+- ⚙️ **Back-end:** Node.js (em partes específicas)  
+- ➕ **Outras ferramentas:** Git & GitHub 
+
+## 🚀 Quer ver como ficou?  
+Acesse meu portfólio online aqui:  
+🔗 [Meu portfólio](https://vinicius-aguiar.vercel.app/) 
+
+## 📬 Contato
+
+📸 **Instagram:** [Vinicius Aguiar](https://www.instagram.com/vinnyaguiarr/)
+
+💼 **LinkedIn:** [Vinicius Bernardino Aguiar](https://www.linkedin.com/in/vinicius-bernardino/)
