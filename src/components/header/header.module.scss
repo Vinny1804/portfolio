@@ -16,6 +16,19 @@
 .nomePortfolio {
     cursor: pointer;
     font-size: 40px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        text-shadow: 0 0 5px #21a0e4;
+    }
+    50% {
+        text-shadow: 0 0 15px #21a0e4;
+    }
+    75% {
+        text-shadow: 0 0 5px #21a0e4;
+    }
 }
 
 .sectionHeader {
